@@ -1,6 +1,7 @@
 {
   "name": "client",
   "type": "module",
+  "access-control-allow-origin": "*",
   "version": "1.0.0",
   "main": "client.js",
   "scripts": {
