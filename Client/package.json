@@ -1,0 +1,24 @@
+{
+  "name": "client",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "client.js",
+  "scripts": {
+    "start": "node client.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node client.js",
+    "serve": "node client.js"
+  },
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.14.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "author": "bachelor",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
