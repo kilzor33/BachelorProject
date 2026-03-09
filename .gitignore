@@ -3,3 +3,4 @@
 /Server/node_modules
 /Server/Database/node_modules
 /Server/Database/.env
+/Server/Database/snowflake.log
