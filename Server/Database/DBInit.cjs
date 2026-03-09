@@ -1,11 +1,13 @@
-require('dotenv').config();
-require('snowflake-sdk');
+var dotenv = require('dotenv');
+var snowflake = require('snowflake-sdk');
 
-let snowflake = new snowflake-sdk;
+dotenv.config();
+
+//new snowflake-sdk;
 //console.log(process.env);
 console.log(process.env.DBUSER);
-var connection = snowflake-sdk.createConnection({
-  account: "myaccount.us-east-2",
+var connection = snowflake.createConnection({
+  account: process.env.DBACCOUNT,
   username: process.env.DBUSER,
   password: process.env.DBPASSWORD
 });
