@@ -1,3 +1,4 @@
 /Client/node_modules
 /Server/data.json
 /Server/node_modules
+.env
