@@ -1,4 +1,5 @@
 /Client/node_modules
 /Server/data.json
 /Server/node_modules
-.env
+/Server/Database/node_modules
+/Server/Database/.env

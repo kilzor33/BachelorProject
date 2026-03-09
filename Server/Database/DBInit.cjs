@@ -1,17 +1,26 @@
-var dotenv = require('dotenv');
+var dotenv = require('dotenv').config();
 var snowflake = require('snowflake-sdk');
 
-dotenv.config();
-
-//new snowflake-sdk;
-//console.log(process.env);
-console.log(process.env.DBUSER);
 var connection = snowflake.createConnection({
   account: process.env.DBACCOUNT,
   username: process.env.DBUSER,
-  password: process.env.DBPASSWORD
+  authenticator: 'USERNAME_PASSWORD_MFA',
+  password: process.env.DBPASSWORD,
+  passcode: process.env.DBPASSCODE
 });
 
+connection.connectAsync( 
+    function(err, conn) {
+        if (err) {
+            console.error('Unable to connect: ' + err.message);
+        } 
+        else {
+            console.log('Successfully connected to Snowflake.');
+            // Optional: store the connection ID.
+            connection.connection_ID = conn.getId();
+        }
+    }
+);
 
 //const connection = await DuckDBConnection.create();
 //const reader = await connection.run("create table if not exists EventLog (eventName varchar, location varchar, points bigint, logicalTimeStamp bigint, windowsize json)");
