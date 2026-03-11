@@ -4,9 +4,7 @@ var snowflake = require('snowflake-sdk');
 var connection = snowflake.createConnection({
   account: process.env.DBACCOUNT,
   username: process.env.DBUSER,
-  authenticator: 'USERNAME_PASSWORD_MFA',
-  password: process.env.DBPASSWORD,
-  passcode: process.env.DBPASSCODE
+  password: process.env.DBPASSWORD
 });
 
 connection.connectAsync( 
