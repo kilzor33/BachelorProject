@@ -8,11 +8,9 @@ var connection = snowflake.createConnection({
 });
 
 establishConnection();
-executeStatement();
 
-
-function establishConnection() {
-    connection.connect( 
+async function establishConnection() {
+    await connection.connectAsync( 
         function(err, conn) {
             if (err) {
                 console.error('Unable to connect: ' + err.message);
@@ -25,22 +23,20 @@ function establishConnection() {
         }
     );
 
-    //const isConnectionValid = await connection.isValidAsync();
-    //console.log("is it valid? " + isConnectionValid);
-}
+    const isConnectionValid = await connection.isValidAsync();
 
-function executeStatement () {
     var statement = connection.execute({
-    sqlText: 'CREATE DATABASE testdb',
-    complete: function(err, stmt, rows) {
-        if (err) {
-        console.error('Failed to execute statement due to the following error: ' + err.message);
-        } else {
-        console.log('Successfully executed statement: ' + stmt.getSqlText());
+        sqlText: 'CREATE DATABASE testdb',
+        complete: function(err, stmt, rows) {
+            if (err) {
+            console.error('Failed to execute statement due to the following error: ' + err.message);
+            } else {
+            console.log('Successfully executed statement: ' + stmt.getSqlText());
+            }
         }
-    }
     });
 }
+
 
 //const connection = await DuckDBConnection.create();
 //const reader = await connection.run("create table if not exists EventLog (eventName varchar, location varchar, points bigint, logicalTimeStamp bigint, windowsize json)");
