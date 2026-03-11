@@ -1,4 +1,4 @@
-var dotenv = require('dotenv').config();
+require('dotenv').config();
 var snowflake = require('snowflake-sdk');
 
 var connection = snowflake.createConnection({
@@ -7,18 +7,40 @@ var connection = snowflake.createConnection({
   password: process.env.DBPASSWORD
 });
 
-connection.connectAsync( 
-    function(err, conn) {
+establishConnection();
+executeStatement();
+
+
+function establishConnection() {
+    connection.connect( 
+        function(err, conn) {
+            if (err) {
+                console.error('Unable to connect: ' + err.message);
+            } 
+            else {
+                console.log('Successfully connected to Snowflake.');
+                // Optional: store the connection ID.
+                connection.connection_ID = conn.getId();
+            }
+        }
+    );
+
+    //const isConnectionValid = await connection.isValidAsync();
+    //console.log("is it valid? " + isConnectionValid);
+}
+
+function executeStatement () {
+    var statement = connection.execute({
+    sqlText: 'CREATE DATABASE testdb',
+    complete: function(err, stmt, rows) {
         if (err) {
-            console.error('Unable to connect: ' + err.message);
-        } 
-        else {
-            console.log('Successfully connected to Snowflake.');
-            // Optional: store the connection ID.
-            connection.connection_ID = conn.getId();
+        console.error('Failed to execute statement due to the following error: ' + err.message);
+        } else {
+        console.log('Successfully executed statement: ' + stmt.getSqlText());
         }
     }
-);
+    });
+}
 
 //const connection = await DuckDBConnection.create();
 //const reader = await connection.run("create table if not exists EventLog (eventName varchar, location varchar, points bigint, logicalTimeStamp bigint, windowsize json)");
