@@ -4,7 +4,7 @@ GameStateLogger is a library that allows users to log events in their JavaScrip
 GameStateLogger a lightweight framework that lets the user determine how many and which events to log without causing a large performance overhead.
 
 **Content Overview**
-[[#Importing GameStateLogger to your game]]
+[test](#Importing GameStateLogger to your game)
 [[#Initializing the GameStateLogger]]
 [[#Available functions]]
 - [[#logKeyDownEvent(ID, event, time = "n/a", points = "n/a")]]
@@ -36,9 +36,9 @@ import { GameStateLogger } from 'gamestatelogger';
 >Add   `"type": "module"` to your package.json file, as such:
 >```
 >{
-  "name": "my-game",
-  "type": "module",
-  "author": "Jane Doe, John Doe",
+>  "name": "my-game",
+>  "type": "module",
+>  "author": "Jane Doe, John Doe",
 >}
 >```
 
@@ -140,9 +140,9 @@ This requirement is to enable precise analysis in databases, as the user of the 
 >Add   `"type": "module"` to your package.json file, as such:
 >```
 >{
-  "name": "my-game",
-  "type": "module",
-  "author": "Jane Doe, John Doe",
+>  "name": "my-game",
+>  "type": "module",
+>  "author": "Jane Doe, John Doe",
 >}
 >```
 
