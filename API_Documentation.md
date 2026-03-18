@@ -4,7 +4,7 @@ GameStateLogger is a library that allows users to log events in their JavaScrip
 GameStateLogger a lightweight framework that lets the user determine how many and which events to log without causing a large performance overhead.
 
 **Content Overview:**
-<p>[Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game)</p>
+<p> [Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game) </p>
 <p>[Initializing the GameStateLogger](#initializing-the-gamestatelogger)</p>
 <p>[Available functions](#available-functions)</p>
 <p>- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent(id,-event,-time-=-"n/a",-points-=-"n/a"))</p>
