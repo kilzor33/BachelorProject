@@ -4,15 +4,13 @@ GameStateLogger is a library that allows users to log events in their JavaScrip
 GameStateLogger a lightweight framework that lets the user determine how many and which events to log without causing a large performance overhead.
 
 **Content Overview:**
-
-
-[Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game)
-[Initializing the GameStateLogger](#initializing-the-gamestatelogger)
-[Available functions](#available-functions)
-- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent(id,-event,-time-=-"n/a",-points-=-"n/a"))
-- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickevent(id,-event,-location,-time-=-"n/a",-points-=-"n/a"))
-- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevel(id,-newlevel,-time-=-"n/a",-points-=-"n/a"))
-- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresult(id,-event,-time-=-"n/a",-points-=-"n/a",-highscore-=-"n/a"))
+<p>[Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game)</p>
+<p>[Initializing the GameStateLogger](#initializing-the-gamestatelogger)</p>
+<p>[Available functions](#available-functions)</p>
+<p>- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent(id,-event,-time-=-"n/a",-points-=-"n/a"))</p>
+<p>- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickevent(id,-event,-location,-time-=-"n/a",-points-=-"n/a"))</p>
+<p>- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevel(id,-newlevel,-time-=-"n/a",-points-=-"n/a"))</p>
+<p>- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresult(id,-event,-time-=-"n/a",-points-=-"n/a",-highscore-=-"n/a"))</p>
 
 
 ## Importing GameStateLogger to your game
@@ -50,16 +48,16 @@ import { GameStateLogger } from 'gamestatelogger';
 To create an instance of the GameStateLogger for use in your game file, create a new object of the GameStateLogger:
 `var gameStateLogger = new GameStateLogger(eventLog, flushSize)`
 
->**eventLog \[Type: Array\]:** An array for holding logged events.
->**flushSize \[Type: Number\]:** A Number that lets the user define how often the eventLog should be sent to the server.
+><p>**eventLog \[Type: Array\]:** An array for holding logged events.</p>
+><p>**flushSize \[Type: Number\]:** A Number that lets the user define how often the eventLog should be sent to the server.</p>
 
 ## Available functions
 ### logKeyDownEvent(ID, event, time = "n/a", points = "n/a")
 
->**ID \[Type: Number\]:** Game session ID.
->**event \[Type: String\]:** A string with the name of the key pressed. Example: "ArrowDown" or "w".
->_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.
->_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.
+><p>**ID \[Type: Number\]:** Game session ID.</p>
+><p>**event \[Type: String\]:** A string with the name of the key pressed. Example: "ArrowDown" or "w".</p>
+><p>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.</p>
+><p>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.</p>
 
 `logKeyDownEvent(...)` is used to log when a user presses a key.
 
@@ -69,14 +67,14 @@ You have to have some form of session ID implemented in your game, that you 
 
 ### logClickEvent(ID, event, location, time = "n/a", points = "n/a")
 
->**ID \[Type: Number\]:** Game session ID.
->**event \[Type: String\]:** A string with the name of the key pressed. Example: "ArrowDown" or "w".
->**location \[Type: Object || String || Number\]:** The location of the click. Recommended formats:
->Object of the form: {x : xcoord, y: ycoord}.
->A string containing the ID of an HTML element that was clicked.
->A string or number identifier of a clickable element in your game.
->_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.
->_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.
+><p>**ID \[Type: Number\]:** Game session ID.</p>
+><p>**event \[Type: String\]:** A string with the name of the key pressed. Example: "ArrowDown" or "w".</p>
+><p>**location \[Type: Object || String || Number\]:** The location of the click. Recommended formats:</p>
+><p>Object of the form: {x : xcoord, y: ycoord}.</p>
+><p>A string containing the ID of an HTML element that was clicked.</p>
+><p>A string or number identifier of a clickable element in your game.</p>
+><p>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.</p>
+><p>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.</p>
 
 `logClickEvent(...)` is used to log when a user clicks with their mouse.
 
@@ -86,10 +84,10 @@ You have to have some form of session ID implemented in your game, that you 
 
 ### logNewLevel(ID, newLevel, time = "n/a", points = "n/a") 
 
->**ID \[Type: Number\]:** Game session ID.
->**newLevel \[Type: Number\]:** 
->_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.
->_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.
+><p>**ID \[Type: Number\]:** Game session ID.</p>
+><p>**newLevel \[Type: Number\]:** A number representing the new level.</p>
+><p>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.</p>
+><p>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.</p>
 
 `logNewLevel(...)` is used to logging when a user changes levels, if your game has a level system. 
 This lets you keep track of at which level following logged events happened.
@@ -100,10 +98,10 @@ You have to have some form of session ID implemented in your game, that you 
 
 ### logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")
 
->**ID \[Type: Number\]:** Game session ID.
->**event \[Type: String\]:** A string representing the game result. Examples: "Game Over", "Tie", "Player won". The specific content of the string is up to user of the framework, however we recommend to keep it consistent across all logs.
->_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.
->_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.
+><p>**ID \[Type: Number\]:** Game session ID.</p>
+><p>**event \[Type: String\]:** A string representing the game result. Examples: "Game Over", "Tie", "Player won". The specific content of the string is up to user of the framework, however we recommend to keep it consistent across all logs.</p>
+><p>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.</p>
+><p>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.</p>
 
 `logGameResult(...)` is used to log intermediate game results, such as game overs, ties, or wins of a specific round.
 
@@ -115,11 +113,11 @@ You have to have some form of session ID implemented in your game, that you 
 
 ### logGameEnd(ID, event, time = "n/a", points = "n/a", highscore = "n/a")
 
->**ID \[Type: Number\]:** Game session ID.
->**event \[Type: String\]:** A string representing that the game has been ended. Examples: "Game session ended". The specific content of the string is up to user of the framework, however we recommend to keep it consistent across all logs.
->_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.
->_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.
->_OPTIONAL:_ **highscore \[Type: Number\]:** A number representing the final highscore of the player.
+><p>**ID \[Type: Number\]:** Game session ID.</p>
+><p>**event \[Type: String\]:** A string representing that the game has been ended. Examples: "Game session ended". The specific content of the string is up to user of the framework, however we recommend to keep it consistent across all logs.</p>
+><p>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.</p>
+><p>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.</p>
+><p>_OPTIONAL:_ **highscore \[Type: Number\]:** A number representing the final highscore of the player.</p>
 
 `logGameEnd(...)` is used to log that a game session has been ended. This is not to be confused with a Game Over event, where a player can continue playing a new round. This function is intended to be used when a game session is completely ended.
 A separate function exists for logging events such as Game Overs, see [[#logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")]].
