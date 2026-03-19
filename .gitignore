@@ -1,3 +1,7 @@
-/Client/node_modules
-/Server/data.json
-/Server/node_modules
+/lib/package-lock.json
+/server/data.json
+/server/node_modules
+/server/package-lock.json
+/server/database/node_modules
+/server/database/.env
+/server/database/snowflake.log
