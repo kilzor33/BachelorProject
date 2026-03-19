@@ -1,3 +1,5 @@
+# NOTES FOR FINISHING THE DOCUMENTS: Find out what we do about NPM as well as logical time!!!
+
 # Documentation for GameStateLogger
 GameStateLogger is a library that allows users to log events in their JavaScript games, to enable analyzing, debugging, and in limited capacity, observe a run of a game to ensure that it is not fraudulent or to observe where bugs in the gameplay might have arisen.
 
@@ -5,6 +7,9 @@ GameStateLogger a lightweight framework that lets the user determine how many 
 
 **Content Overview:**  
 [Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game)  
+- [Requirements to use the API](#requirementstousethe-api)  
+- [Importing](#importing)
+  
 [Initializing the GameStateLogger](#initializingthegamestatelogger)  
 [Available functions](#available-functions)  
 - [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydowneventid-event-time--na-points--na)
@@ -14,20 +19,11 @@ GameStateLogger a lightweight framework that lets the user determine how many 
 - [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time--na-points--na-highscore--na)
 - [logGameEnd(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameendid-event-time--na-points--na-highscore--na)
   
-[Requirements to use the API](#requirementstousethe-api)
-
 ## Importing GameStateLogger to your game
-In order to use the framework, you need to import the npm package for GameStateLogger.
 
-In your terminal of choice, from the folder in which you main JavaScript file for your game is placed, run:
-```
-npm install GameStateLogger
-```
-
-Then, in the top of your game JavaScript file, import the GameStateLogger using ES Module syntax:
-```
-import { GameStateLogger } from 'gamestatelogger';
-```
+### Requirements to use the API 
+Every logging function requires the framework user to log a game session ID.
+This requirement is to enable precise analysis in databases, as the user of the framework will then be able to use the ID to group events together.
 
 > [!NOTE]  
 > JavaScript requires that any file that uses a module is also a module itself.
@@ -46,6 +42,20 @@ import { GameStateLogger } from 'gamestatelogger';
 >  "author": "Jane Doe, John Doe",
 >}
 >```
+
+### Importing
+In order to use the framework, you need to import the npm package for GameStateLogger.
+
+In your terminal of choice, from the folder in which you main JavaScript file for your game is placed, run:
+```
+npm install GameStateLogger
+```
+
+Then, in the top of your game JavaScript file, import the GameStateLogger using ES Module syntax:
+```
+import { GameStateLogger } from 'gamestatelogger';
+```
+  
 
 ## Initializing the GameStateLogger 
 To create an instance of the GameStateLogger for use in your game file, create a new object of the GameStateLogger:
@@ -141,25 +151,3 @@ A separate function exists for logging events such as Game Overs, see [[#logGame
 You have to have some form of session ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
-
-## Requirements to use the API 
-Every logging function requires the framework user to log a game session ID.
-This requirement is to enable precise analysis in databases, as the user of the framework will then be able to use the ID to group events together.
-
-> [!NOTE]  
-> JavaScript requires that any file that uses a module is also a module itself.
-> There are two options you might try to ensure your game file is a module type file:
-> 
-> **In the HTML file, where you import your JavaScript game file:**
-> Add `type="module"` to your import, as such:
-> `<script type="module" src="game.js"></script>`
-> 
-> **In your package.json:**
->Add   `"type": "module"` to your package.json file, as such:
->```
->{
->  "name": "my-game",
->  "type": "module",
->  "author": "Jane Doe, John Doe",
->}
->```
