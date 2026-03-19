@@ -12,7 +12,8 @@ GameStateLogger a lightweight framework that lets the user determine how many 
 - [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickeventid-event-location-time--na-points--na)  
 - [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevelidnewlevel-time--na-points--na)  
 - [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time--na-points--na-highscore--na)
-- [logGameEnd(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameendid-event-time--na-points--na-highscore--na)  
+- [logGameEnd(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameendid-event-time--na-points--na-highscore--na)
+  
 [Requirements to use the API](#requirementstousethe-api)
 
 ## Importing GameStateLogger to your game
