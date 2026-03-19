@@ -74,7 +74,7 @@ To create an instance of the GameStateLogger for use in your game file, create a
 
 `logKeyDownEvent(...)` is used to log when a user presses a key. Note that the logged event automatically comes with a field `keyPressType: "keyDown"`, to distinguish it from a keyUp event.
 
-You have to have some form of game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+You have to have some form of game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
 
@@ -87,7 +87,7 @@ You have to have some form of game ID implemented in your game, that you can
 
 `logKeyUpEvent(...)` is used to log when a user releases a key. Note that the logged event automatically comes with a field `keyPressType: "keyUp"`, to distinguish it from a keyDown event.
 
-You have to have some form of Game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+You have to have some form of Game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
 
@@ -104,7 +104,7 @@ You have to have some form of Game ID implemented in your game, that you can
 
 `logClickEvent(...)` is used to log when a user clicks with their mouse.
 
-You have to have some form of game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+You have to have some form of game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
 
@@ -118,7 +118,7 @@ You have to have some form of game ID implemented in your game, that you can
 `logNewLevel(...)` is used to logging when a user changes levels, if your game has a level system. 
 This lets you keep track of at which level following logged events happened.
 
-You have to have some form of game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+You have to have some form of game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
 
@@ -133,7 +133,7 @@ You have to have some form of game ID implemented in your game, that you can
 
 Note that a separate function exists for logging when a user closes their window, [[#logWindowClose(ID, event, time = "n/a", points = "n/a", highscore = "n/a")]]
 
-You have to have some form of game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+You have to have some form of game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 
 `time` and `points` default to a value of “n/a” if no parameter is given. 
 
@@ -146,8 +146,7 @@ You have to have some form of game ID implemented in your game, that you can
 >_OPTIONAL:_ **highscore \[Type: Number\]:** A number representing the final highscore of the player.  
 
 `logWindowClose(...)` is used to log that the window has been closed. This function is intended to be used when a game session is completely ended.
-A separate function exists for logging events such as Game Overs, see [[#logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")]].
+A separate function exists for logging events such as Game Overs, see [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time--na-points--na-highscore--na).  
 
-You have to have some form of game ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
-
+You have to have some form of game ID implemented in your game, that you can send through the log. See [Requirements to use the API](#requirementstousethe-api).  
 `time` and `points` default to a value of “n/a” if no parameter is given. 
