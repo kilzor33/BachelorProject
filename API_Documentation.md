@@ -2,17 +2,16 @@
 GameStateLogger is a library that allows users to log events in their JavaScript games, to enable analyzing, debugging, and in limited capacity, observe a run of a game to ensure that it is not fraudulent or to observe where bugs in the gameplay might have arisen.
 
 GameStateLogger a lightweight framework that lets the user determine how many and which events to log without causing a large performance overhead.  
-[Initializing the GameStateLogger](#initializing-the-gamestatelogger).  
+
 **Content Overview:**  
 [Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game).  
 [Initializing the GameStateLogger](#initializing-the-gamestatelogger).  
 [Available functions](#available-functions).  
 - [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent-id-event-time-na-points-na).  
-- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickevent(id-event-location-time-na-points-na)).  
-- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevel(id-newlevel-time-na-points-na)).  
-- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresult(id-event-time-na-points-na-highscore-na)).  
+- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickeventid-event-location-time-na-points-na)).  
+- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevelid-newlevel-time-na-points-na)).  
+- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time-na-points-na-highscore-na)).  
 
-- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent-id-event-time-na-points-na).  
 ## Importing GameStateLogger to your game
 In order to use the framework, you need to import the npm package for GameStateLogger.
 
