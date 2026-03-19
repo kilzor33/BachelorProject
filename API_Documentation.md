@@ -7,10 +7,10 @@ GameStateLogger a lightweight framework that lets the user determine how many 
 [Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game).  
 [Initializing the GameStateLogger](#initializing-the-gamestatelogger).  
 [Available functions](#available-functions).  
-- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent(id,-event,-time-=-"n/a",-points-=-"n/a")).  
-- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickevent(id,-event,-location,-time-=-"n/a",-points-=-"n/a")).  
-- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevel(id,-newlevel,-time-=-"n/a",-points-=-"n/a")).  
-- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresult(id,-event,-time-=-"n/a",-points-=-"n/a",-highscore-=-"n/a")).  
+- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydownevent-id-event-time-na-points-na).  
+- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickevent(id-event-location-time-na-points-na)).  
+- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevel(id-newlevel-time-na-points-na)).  
+- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresult(id-event-time-na-points-na-highscore-na)).  
 
 
 ## Importing GameStateLogger to your game
