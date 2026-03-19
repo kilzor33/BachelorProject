@@ -4,13 +4,16 @@ GameStateLogger is a library that allows users to log events in their JavaScrip
 GameStateLogger a lightweight framework that lets the user determine how many and which events to log without causing a large performance overhead.  
 
 **Content Overview:**  
-[Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game).  
-[Initializing the GameStateLogger](#initializingthegamestatelogger).  
-[Available functions](#available-functions).  
-- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydowneventid-event-time--na-points--na).  
-- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickeventid-event-location-time--na-points--na).  
-- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevelid-newlevel-time--na-points--na).  
-- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time--na-points--na-highscore--na).  
+[Importing GameStateLogger to your game](#importing-gamestatelogger-to-your-game)  
+[Initializing the GameStateLogger](#initializingthegamestatelogger)  
+[Available functions](#available-functions)  
+- [logKeyDownEvent(ID, event, time = "n/a", points = "n/a")](#logkeydowneventid-event-time--na-points--na)
+- [logKeyUpEvent(ID, event, time = "n/a", points = "n/a")](#logkeyupeventid-event-time--na-points--na)
+- [logClickEvent(ID, event, location, time = "n/a", points = "n/a")](#logclickeventid-event-location-time--na-points--na)  
+- [logNewLevel(ID, newLevel, time = "n/a", points = "n/a")](#lognewlevelidnewlevel-time--na-points--na)  
+- [logGameResult(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameresultid-event-time--na-points--na-highscore--na)
+- [logGameEnd(ID, event, time = "n/a", points = "n/a", highscore = "n/a")](#loggameendid-event-time--na-points--na-highscore--na)  
+[Requirements to use the API](#requirementstousethe-api)
 
 ## Importing GameStateLogger to your game
 In order to use the framework, you need to import the npm package for GameStateLogger.
@@ -58,7 +61,20 @@ To create an instance of the GameStateLogger for use in your game file, create a
 >_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.  
 >_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.  
 
-`logKeyDownEvent(...)` is used to log when a user presses a key.
+`logKeyDownEvent(...)` is used to log when a user presses a key. Note that the logged event automatically comes with a field `keyPressType: "keyDown"`, to distinguish it from a keyUp event.
+
+You have to have some form of session ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
+
+`time` and `points` default to a value of “n/a” if no parameter is given. 
+
+### logKeyUpEvent(ID, event, time = "n/a", points = "n/a")
+
+>**ID \[Type: Number\]:** Game session ID.  
+>**event \[Type: String\]:** A string with the name of the key released. Example: "ArrowDown" or "w".  
+>_OPTIONAL:_ **time \[Type: Number\]:** The time at which an event has occurred. Choosing a logical time or real time is up to the user of the framework, however logical time is encouraged for precise logging. Consistency in time counting should be kept across all logs.  
+>_OPTIONAL:_ **points \[Type: Number\]:** A number representing the current number of points the player has.  
+
+`logKeyUpEvent(...)` is used to log when a user releases a key. Note that the logged event automatically comes with a field `keyPressType: "keyUp"`, to distinguish it from a keyDown event.
 
 You have to have some form of session ID implemented in your game, that you can send through the log. See [[#Requirements to use the API]].
 
